@@ -17,12 +17,10 @@ public class BaseTest {
         System.out.println("Действие после теста");
     }
 
-
     @BeforeMethod
     public void checkLogin() {
         System.out.println("Действие перед методом");
     }
-
 
     @AfterMethod
     public void screenShot() {
