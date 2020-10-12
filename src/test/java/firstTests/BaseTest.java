@@ -8,22 +8,22 @@ import org.testng.annotations.BeforeTest;
 public class BaseTest {
 
     @BeforeTest
-    public void profileSetup() {
+    public void beforeT() {
         System.out.println("Дейсивие перед тестом");
     }
 
     @AfterTest
-    public void reportReady() {
+    public void afterT() {
         System.out.println("Действие после теста");
     }
 
     @BeforeMethod
-    public void checkLogin() {
+    public void beforeM() {
         System.out.println("Действие перед методом");
     }
 
     @AfterMethod
-    public void screenShot() {
+    public void afterM() {
         System.out.println("Действие после метода");
     }
 }

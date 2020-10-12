@@ -30,4 +30,6 @@ public class SecondTest extends BaseTest {
         Assertion a = new Assertion();
         a.assertTrue(num.equalsIgnoreCase("70.0"));
     }
+
+
 }
