@@ -4,8 +4,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import pageObject.Common;
 
 public class BaseTest {
+
+    protected Common c = new Common();
 
     @BeforeTest
     public void beforeT() {

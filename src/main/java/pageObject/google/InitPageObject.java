@@ -1,5 +1,6 @@
 package pageObject.google;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +23,7 @@ public class InitPageObject extends Base {
      *
      * @param text
      */
+    @Step("Вводим текст в поисковую строку {text}")
     public void setSearchText(String text) {
         setText(setSearchText, text);
     }
@@ -29,7 +31,8 @@ public class InitPageObject extends Base {
     /**
      * Кликаем по кнопке Поиск в гугле.
      */
-    public void clickSubmitSearch(){
+    @Step("Кликаем по кнопке Поиск в гугле.")
+    public void clickSubmitSearch() {
         click(submitSearch);
     }
 
