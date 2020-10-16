@@ -1,7 +1,11 @@
 package seleniumTests;
 
+import io.qameta.allure.Attachment;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
@@ -48,4 +52,16 @@ public class BaseTest {
     public WebDriver getDriver() {
         return driver;
     }
+
+    /**
+     * Метод снятия скриншота с драйвера.
+     *
+     * @return
+     */
+    @Attachment(value = "Page screenshot", type = "image/png")
+    protected byte[] getScreenShot() {
+
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
 }

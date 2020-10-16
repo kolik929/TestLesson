@@ -24,6 +24,7 @@ public class SelTest extends BaseTest {
         in.clickSubmitSearch();
         sea.clickImagesTab();
         sea.assertImagesTabIsOpen();
+        getScreenShot();
 
 
     }
